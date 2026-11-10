@@ -1,4 +1,33 @@
 ﻿{
-  "status": "in progress"
+  "name": "example-seo-mcp",
+  "description": "An MCP server exposing SEO analysis tools: page audits, AI-search readiness checks, and structured-data generation.",
+  "version": "1.0.0",
+  "author": "Your Organisation",
+  "repository": "https://github.com/yourorg/example-seo-mcp",
+  "homepage": "https://yourdomain.com/mcp",
+  "license": "MIT",
+  "tools": [
+    {
+      "name": "audit_page",
+      "description": "Fetch a URL and return a JSON report of on-page SEO signals: title, meta description, H1–H6 structure, canonical, and internal link count."
+    },
+    {
+      "name": "check_ai_readiness",
+      "description": "Return a JSON report on AI-search discoverability: robots.txt access for retrieval bots (OAI-SearchBot, Claude-SearchBot, PerplexityBot), presence of llms.txt, and structured data validity."
+    },
+    {
+      "name": "generate_jsonld",
+      "description": "Given a page URL and a schema type (Article, Product, FAQ, HowTo, Organization), return suggested JSON-LD markup."
+    },
+    {
+      "name": "validate_robots",
+      "description": "Parse a robots.txt URL and report which AI crawlers are allowed, blocked, or unmentioned."
+    }
+  ],
+  "categories": ["seo", "ai-search", "developer-tools", "web-analysis"],
+  "pricing": "free",
+  "auth_required": false,
+  "transport": "stdio",
+  "documentation_url": "https://yourdomain.com/mcp/docs",
+  "created_at": "2026-11-10T00:00:00Z"
 }
-

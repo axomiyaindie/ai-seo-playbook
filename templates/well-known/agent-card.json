@@ -1,4 +1,61 @@
 ﻿{
-  "status": "in progress"
+  "name": "Example SEO Agent",
+  "description": "An A2A-compliant agent that analyses web pages for SEO and AI-search readiness, returning structured recommendations.",
+  "version": "1.0.0",
+  "supportedInterfaces": [
+    {
+      "url": "https://yourdomain.com/a2a/v1",
+      "protocolBinding": "HTTP+JSON",
+      "protocolVersion": "1.0.0"
+    },
+    {
+      "url": "https://yourdomain.com/a2a/jsonrpc",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0.0"
+    }
+  ],
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "extendedAgentCard": false
+  },
+  "defaultInputModes": [
+    "text/plain",
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "skills": [
+    {
+      "id": "analyse-page-seo",
+      "name": "Analyse Page SEO",
+      "description": "Fetches a URL and returns a structured report covering title, meta description, headings, internal links, and structured data presence.",
+      "tags": ["seo", "audit", "technical"],
+      "examples": [
+        "Analyse https://example.com for SEO issues",
+        "Check the meta tags on this page"
+      ]
+    },
+    {
+      "id": "check-ai-readiness",
+      "name": "Check AI Search Readiness",
+      "description": "Evaluates whether a page is discoverable and citable by AI search engines, including robots.txt access for retrieval bots, llms.txt presence, and content structure.",
+      "tags": ["geo", "aeo", "ai-search", "discovery"],
+      "examples": [
+        "Is this page citable by ChatGPT?",
+        "Check AI crawler access for my site"
+      ]
+    },
+    {
+      "id": "generate-schema",
+      "name": "Generate Structured Data",
+      "description": "Produces JSON-LD structured data recommendations based on page content type (Article, Product, FAQ, HowTo, Organization).",
+      "tags": ["structured-data", "schema", "json-ld"],
+      "examples": [
+        "Generate Article schema for this blog post",
+        "What schema should I add to my pricing page?"
+      ]
+    }
+  ]
 }
-
