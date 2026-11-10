@@ -1,0 +1,4 @@
+﻿# ai.txt template
+
+> Status: in progress.
+
