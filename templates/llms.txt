@@ -1,0 +1,15 @@
+# Your Product Name
+
+> One or two sentences: what it is, who it is for, and what makes it different.
+
+## Key pages
+- [Product overview](https://example.com/product): What it does and for whom
+- [Pricing](https://example.com/pricing): Plans and costs
+- [Documentation](https://example.com/docs): Setup and API reference
+
+## Comparisons and guides
+- [Product vs Alternative](https://example.com/compare/alternative): Honest comparison
+- [Getting started guide](https://example.com/guides/start): Step-by-step
+
+## Optional
+- [Blog](https://example.com/blog)
