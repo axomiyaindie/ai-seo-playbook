@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">AI SEO Playbook</h1>
-<p align="center"><b>The playbook for ranking in search engines and getting your product cited by Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini and every other LLM.</b></p>
+<p align="center"><b>The free playbook for ranking in search engines and getting your product cited by Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini and every other LLM.</b></p>
 
 <p align="center">
   Traditional SEO · GEO · AEO · LLMO · Technical · Content · Measurement
@@ -57,7 +57,7 @@ This is a free, community-built playbook for **SEOs, marketers, founders and dev
 | # | Section | What's inside |
 |---|---|---|
 | 01 | [Foundations](docs/modern-ai-seo/01-foundations/README.md) | How AI answers are produced |
-| 02 | [GEO and AEO](docs/modern-ai-seo/02-geo-aeo/README.md) | Tactics + [Google's official AI guide](docs/modern-ai-seo/02-geo-aeo/google-ai-guide-2026.md) |
+| 02 | [GEO and AEO](docs/modern-ai-seo/02-geo-aeo/README.md) | Tactics + [implementation playbook](docs/modern-ai-seo/02-geo-aeo/implementation-playbook.md) + [Google's official AI guide](docs/modern-ai-seo/02-geo-aeo/google-ai-guide-2026.md) |
 | 03 | [Technical](docs/modern-ai-seo/03-technical/README.md) | [Sitemaps/robots](docs/modern-ai-seo/03-technical/sitemap-and-robots.md) · [llms.txt](docs/modern-ai-seo/03-technical/llms-txt.md) · [AI preferences](docs/modern-ai-seo/03-technical/ai-usage-preferences.md) · [.well-known/MCP](docs/modern-ai-seo/03-technical/well-known-agents-and-mcp.md) · [Structured data](docs/modern-ai-seo/03-technical/structured-data.md) |
 | 04 | [Content](docs/modern-ai-seo/04-content/README.md) | Citable content, entities, brand mentions |
 | 05 | [Measurement](docs/modern-ai-seo/05-measurement/README.md) | Tracking AI visibility, citations, referrals |
