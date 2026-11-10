@@ -22,7 +22,7 @@ The AI-agent additions:
 | File | Purpose | Standard |
 |---|---|---|
 | `.well-known/agent-card.json` | Describe an A2A agent | A2A (Agent2Agent) |
-| `.well-known/mcp-server-card.json` | Describe an MCP server | MCP (Model Context Protocol) |
+| `.well-known/mcp/server-card.json` | Describe an MCP server | MCP (Model Context Protocol) |
 
 Both are **emerging**. Neither is a Google or OpenAI requirement. Publishing them is a low-cost hedge for the agentic layer — not a substitute for anything in this playbook.
 
@@ -97,11 +97,33 @@ A full template lives at [`templates/well-known/agent-card.json`](../../../templ
 
 **MCP (Model Context Protocol)** is an open protocol from Anthropic for connecting AI assistants to data sources and tools. An **MCP server** exposes tools that AI assistants can call. An **MCP server card** describes the server: what tools it offers, how to connect, and what it costs.
 
+### MCP specification update (2026-07-28)
+
+The MCP specification was **substantially revised** in the 2026-07-28 version [citation:1][citation:6]. The changes matter for anyone publishing an MCP server card because the protocol underneath the card has changed.
+
+**What changed in the core protocol:**
+
+| Change | What it means |
+|---|---|
+| **Stateless by default** | The `initialize` / `notifications/initialized` handshake is removed. Every request now carries protocol version and client capabilities in `_meta` [citation:1][citation:9] |
+| **`server/discover` RPC** | Servers **must** implement this to advertise supported versions, capabilities, and identity. Clients may call it before any other request [citation:9] |
+| **No protocol-level sessions** | The `Mcp-Session-Id` header is removed from the Streamable HTTP transport. Servers that need cross-call state use explicit server-minted handles passed as tool arguments [citation:8][citation:9] |
+| **`subscriptions/listen`** | Replaces the old HTTP GET endpoint and `resources/subscribe` / `resources/unsubscribe` with a single long-lived stream [citation:9] |
+| **Roots, sampling, logging deprecated** | Formally deprecated in 2026-07-28; replacement is Multi Round-Trip Requests (MRTR) [citation:9] |
+
+**What this means for server cards:**
+
+The **core advice remains unchanged** — if you operate an MCP server that agents should discover, publish a server card. The card describes what the server does; the protocol changes how agents *communicate* with it after discovery.
+
+**One practical consequence:** because the protocol is now stateless, the card's `transport` field and any `protocolVersion` you declare matter more than before. Agents need to know which version and transport your server supports before they connect. If your server supports both legacy (2025-11-25) and current (2026-07-28) versions, say so in the card [citation:8].
+
 ### Where it lives
 
-```
-https://yourdomain.com/.well-known/mcp-server-card.json
-```
+The MCP server card path has been debated. The current consensus (SEP-1649 / SEP-2127) points to **`/.well-known/mcp/server-card.json`** as the confirmed path [citation:13].
+
+Some implementations also serve `/.well-known/mcp-server-card.json` (the flat path the playbook's template uses) [citation:5][citation:7]. Redocly's implementation uses `/.well-known/mcp/server-card.json` [citation:13].
+
+**Recommendation:** serve the card at **both** paths if possible, or pick `/.well-known/mcp/server-card.json` (the more standardised path) for new implementations. The playbook's template uses the flat path for simplicity, but the nested path is where the spec is converging [citation:13].
 
 ### What it contains
 
@@ -145,6 +167,7 @@ The schema is less rigidly standardised than A2A's, but the core fields are wide
 | `pricing` | `free` / `freemium` / `paid` / `open-source` |
 | `auth_required` | Boolean; if true, document auth in `documentation_url` |
 | `transport` | `stdio` / `http` / `both` |
+| `protocolVersion` | **Newer field** — which MCP spec version the server supports (2025-11-25 or 2026-07-28) |
 
 ### When to publish
 
@@ -161,7 +184,7 @@ This is the least mature area of AI SEO. As of 2026:
 | Standard | Adoption | Notes |
 |---|---|---|
 | **A2A / agent-card.json** | Emerging | Google Cloud published the v1.0 spec; adoption is early |
-| **MCP / mcp-server-card.json** | Emerging | Anthropic's MCP is gaining traction; the server card schema is not formally standardised |
+| **MCP / mcp-server-card.json** | Emerging | MCP is gaining traction; the server card schema is converging on `/.well-known/mcp/server-card.json` [citation:13] |
 | **Agent Registries** | Early | Some registries index agent cards; not universally used |
 | **AI agent consumer usage** | Limited | Few AI assistants autonomously use `.well-known` cards today |
 
@@ -214,6 +237,8 @@ Where you should sit depends on your product. If you sell products or services a
 6. **Linking to non-existent endpoints.** Cards reference URLs; broken URLs kill trust.
 7. **Over-investing in agent SEO** before Part A fundamentals and Part B retrieval fundamentals are in place.
 8. **Assuming Google uses these cards.** Google has not stated that it does. These are for AI agents, not for Google Search.
+9. **Ignoring the MCP spec revision.** The 2026-07-28 protocol is stateless — if you describe a stateful `initialize` handshake in your card or docs, agents expecting the current spec will be confused [citation:1][citation:8].
+10. **Serving the card at only one path.** The path is converging on `/.well-known/mcp/server-card.json`, but some agents may still probe the flat path. Serve both if you can [citation:13].
 
 ---
 
@@ -222,6 +247,8 @@ Where you should sit depends on your product. If you sell products or services a
 - **`.well-known`** is a standard URI path for site metadata (RFC 8615).
 - **`agent-card.json`** describes an A2A agent; **`mcp-server-card.json`** describes an MCP server.
 - **Both are emerging standards** — the least mature area of AI SEO.
+- **MCP is now stateless** (2026-07-28): no `initialize` handshake, `server/discover` RPC, no protocol-level sessions [citation:1][citation:8].
+- **MCP server card path is converging** on `/.well-known/mcp/server-card.json` (SEP-1649 / SEP-2127) [citation:13].
 - **Publish only if you actually operate** an agent or MCP server.
 - **Don't publish placeholders.** Real templates are in `templates/well-known/`.
 - **This is a low-cost hedge, not a priority.** Part A fundamentals and Part B retrieval matter far more today.
