@@ -1,6 +1,6 @@
 # 02 — GEO and AEO
 
-> **Part B · Modern AI SEO** · [← Back to Modern AI SEO](../README.md) · Prev: [01 — Foundations](../01-foundations/README.md) · Next: [Google's AI Guide (2026)](google-ai-guide-2026.md)
+> **Part B · Modern AI SEO** · [← Back to Modern AI SEO](../README.md) · Prev: [01 — Foundations](../01-foundations/README.md) · Next: [Implementation Playbook](implementation-playbook.md)
 
 Chapter 01 explained *how* AI answers are produced. This chapter covers *what to do about it*: the practical tactics for earning retrieval, citation, and recommendation in AI answers. Two related disciplines have emerged for this:
 
@@ -277,7 +277,9 @@ Use this per page that should earn AI visibility:
 
 ---
 
-**Next:** [Google's AI Guide (2026)](google-ai-guide-2026.md) — a summary of Google's official guidance on AI features and how it maps to the tactics in this chapter.
+**Next:** [Implementation Playbook](implementation-playbook.md) — a phased plan for turning these principles into execution.
+
+**Also:** [Google's AI Guide (2026)](google-ai-guide-2026.md) — a summary of Google's official guidance on AI features.
 
 ---
 
