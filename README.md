@@ -3,10 +3,10 @@
 </p>
 
 <h1 align="center">AI SEO Playbook</h1>
-<p align="center"><b>The open-source playbook for getting your product cited by Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini and every other LLM.</b></p>
+<p align="center"><b>The open-source playbook for ranking in search engines and getting your product cited by Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini and every other LLM.</b></p>
 
 <p align="center">
-  SEO · GEO · AEO · LLMO · Technical · Content · Measurement
+  Traditional SEO · GEO · AEO · LLMO · Technical · Content · Measurement
 </p>
 
 ---
@@ -21,6 +21,16 @@ This is a free, community-built playbook for **SEOs, marketers, founders and dev
 2. **Appear** in AI Overviews and AI answers
 3. **Get cited** by LLMs as a trusted source
 
+## Two parts, one playbook
+
+| | Part A · Traditional SEO | Part B · Modern AI SEO |
+|---|---|---|
+| **Goal** | Crawled, indexed, ranked | Cited, recommended, acted on by AI |
+| **Start here** | [Traditional SEO](docs/traditional-seo/README.md) | [Modern AI SEO](docs/modern-ai-seo/README.md) |
+| **Covers** | Search basics, keywords, on-page, technical, content quality, links, measurement | AI crawlers, GEO/AEO, llms.txt, schema, MCP, agents, AI measurement |
+
+> Google says AI Overviews and AI Mode use the **same index and ranking systems** as normal Search, so **do Part A first**. See [how the two connect](docs/how-they-connect.md).
+
 ## Terms in one minute
 
 | Term | Meaning |
@@ -30,25 +40,44 @@ This is a free, community-built playbook for **SEOs, marketers, founders and dev
 | **AEO** | Answer Engine Optimization: being the direct answer (featured snippets, voice, AI answers) |
 | **LLMO** | Large Language Model Optimization: being known and recommended by models |
 
-## Playbook map
+## Part A · Traditional SEO
+
+| # | Page |
+|---|---|
+| 01 | [How search works](docs/traditional-seo/01-how-search-works.md) |
+| 02 | [Keywords and search intent](docs/traditional-seo/02-keywords-and-intent.md) |
+| 03 | [On-page SEO](docs/traditional-seo/03-on-page-seo.md) |
+| 04 | [Technical SEO](docs/traditional-seo/04-technical-seo.md) |
+| 05 | [Content quality and spam policies](docs/traditional-seo/05-content-and-spam-policies.md) |
+| 06 | [Links and authority](docs/traditional-seo/06-links-and-authority.md) |
+| 07 | [Measurement](docs/traditional-seo/07-measurement.md) |
+
+## Part B · Modern AI SEO
 
 | # | Section | What's inside |
 |---|---|---|
-| 01 | [Foundations](docs/01-foundations/) | How search engines and LLMs find, retrieve and cite content |
-| 02 | [GEO and AEO](docs/02-geo-aeo/) | Getting into AI Overviews, ChatGPT, Perplexity, Claude, Gemini |
-| 03 | [Technical](docs/03-technical/) | Crawlers, robots.txt, llms.txt, schema, speed, rendering |
-| 04 | [Content](docs/04-content/) | Citable content, E-E-A-T, entities, brand mentions |
-| 05 | [Measurement](docs/05-measurement/) | Tracking AI visibility, citations and referral traffic |
-| 06 | [What's next](docs/06-whats-next/) | Agents, AI shopping, MCP, emerging trends |
+| 01 | [Foundations](docs/modern-ai-seo/01-foundations/README.md) | How AI answers are produced |
+| 02 | [GEO and AEO](docs/modern-ai-seo/02-geo-aeo/README.md) | Tactics + [Google's official AI guide](docs/modern-ai-seo/02-geo-aeo/google-ai-guide-2026.md) |
+| 03 | [Technical](docs/modern-ai-seo/03-technical/README.md) | [Sitemaps/robots](docs/modern-ai-seo/03-technical/sitemap-and-robots.md) · [llms.txt](docs/modern-ai-seo/03-technical/llms-txt.md) · [AI preferences](docs/modern-ai-seo/03-technical/ai-usage-preferences.md) · [.well-known/MCP](docs/modern-ai-seo/03-technical/well-known-agents-and-mcp.md) · [Structured data](docs/modern-ai-seo/03-technical/structured-data.md) |
+| 04 | [Content](docs/modern-ai-seo/04-content/README.md) | Citable content, entities, brand mentions |
+| 05 | [Measurement](docs/modern-ai-seo/05-measurement/README.md) | Tracking AI visibility, citations, referrals |
+| 06 | [What's next](docs/modern-ai-seo/06-whats-next/README.md) | [Agentic commerce](docs/modern-ai-seo/06-whats-next/agentic-commerce-and-agents.md), agents, MCP |
 
-Ready to use: [Launch checklist](checklists/ai-seo-launch-checklist.md) · [robots.txt template](templates/robots.txt) · [llms.txt template](templates/llms.txt) · [Product schema template](templates/product-schema.json)
+## Ready to use
+
+[Launch checklist](checklists/ai-seo-launch-checklist.md) · [robots.txt](templates/robots.txt) · [llms.txt](templates/llms.txt) · [ai.txt](templates/ai.txt) · [MCP server card](templates/well-known/mcp-server-card.json) · [A2A agent card](templates/well-known/agent-card.json) · [Product schema](templates/product-schema.json) · [Prompt tracker](templates/prompt-tracker.csv)
+
+**References:** [Official links for every standard](docs/references.md) · [Research log](docs/RESEARCH-LOG.md)
 
 ## Quick start
 
-1. Run the [launch checklist](checklists/ai-seo-launch-checklist.md)
-2. Copy the [templates](templates/) into your site
-3. Read [GEO and AEO](docs/02-geo-aeo/README.md)
-4. Track results with [Measurement](docs/05-measurement/README.md)
+1. Work through [Traditional SEO](docs/traditional-seo/README.md)
+2. Run the [launch checklist](checklists/ai-seo-launch-checklist.md)
+3. Copy the [templates](templates/) into your site
+4. Read [Modern AI SEO](docs/modern-ai-seo/README.md)
+5. Track results with [AI measurement](docs/modern-ai-seo/05-measurement/README.md) and [Search Console](docs/traditional-seo/07-measurement.md)
+
+Every claim has a source and date in the [research log](docs/RESEARCH-LOG.md).
 
 ## Contribute
 
