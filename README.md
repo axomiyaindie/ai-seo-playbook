@@ -67,6 +67,8 @@ This is a free, community-built playbook for **SEOs, marketers, founders and dev
 
 [Launch checklist](checklists/ai-seo-launch-checklist.md) · [robots.txt](templates/robots.txt) · [llms.txt](templates/llms.txt) · [ai.txt](templates/ai.txt) · [MCP server card](templates/well-known/mcp-server-card.json) · [A2A agent card](templates/well-known/agent-card.json) · [Product schema](templates/product-schema.json) · [Prompt tracker](templates/prompt-tracker.csv)
 
+**References:** [Official links for every standard](docs/references.md) · [Research log](docs/RESEARCH-LOG.md)
+
 ## Quick start
 
 1. Work through [Traditional SEO](docs/traditional-seo/README.md)
