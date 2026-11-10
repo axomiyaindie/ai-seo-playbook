@@ -6,7 +6,7 @@ Chapter 02 explained *what* GEO and AEO are and *why* they work. This page is th
 
 The core premise: **AI visibility is not a single switch you flip. It is a stack of layers, each building on the last.** Technical access comes first. Then structured data. Then content restructuring. Then new content written to standard. Then tracking. Then ongoing freshness.
 
-This playbook follows a six-phase framework adapted from practitioner guidance on transitioning from traditional SEO to AI search [citation:2]. It assumes Part A fundamentals are already in place.
+This playbook follows a six-phase framework adapted from practitioner guidance on transitioning from traditional SEO to AI search. It assumes Part A fundamentals are already in place.
 
 ---
 
@@ -58,7 +58,7 @@ Fetch a page as a crawler would (without JavaScript execution). If the main cont
 
 **4. Verify sitemap and indexing.**
 
-Confirm your XML sitemap lists only canonical, indexable, `200`-status URLs. Submit it to Bing Webmaster Tools as well as Search Console — Bing's index feeds some AI retrieval systems [citation:2].
+Confirm your XML sitemap lists only canonical, indexable, `200`-status URLs. Submit it to Bing Webmaster Tools as well as Search Console — Bing's index feeds some AI retrieval systems.
 
 ### Output
 
@@ -72,7 +72,7 @@ A checklist of fixes, prioritised by whether they block retrieval entirely (crit
 
 **Timeline:** 2–3 weeks.
 
-This phase produces the **fastest visible gains** because structured data removes ambiguity that keeps pages out of AI answers [citation:2]. AI systems parse entities, relationships, and claims; schema hands them those entities directly [citation:4].
+This phase produces the **fastest visible gains** because structured data removes ambiguity that keeps pages out of AI answers. AI systems parse entities, relationships, and claims; schema hands them those entities directly.
 
 ### Priority schema types
 
@@ -80,24 +80,24 @@ This phase produces the **fastest visible gains** because structured data remove
 
 | Schema | Where | Why |
 |---|---|---|
-| `Organization` | Homepage | Defines your brand entity with `sameAs` links to LinkedIn, Crunchbase, Wikipedia, Wikidata. This is how AI systems connect your site to your entity [citation:4][citation:13]. |
-| `Article` / `BlogPosting` | Every content page | Headline, author, publisher, `datePublished`, `dateModified`. Recency matters: 76.4% of ChatGPT's top 1,000 cited pages were updated within the previous 30 days [citation:1]. |
-| `FAQPage` | Pages with FAQ sections | Explicit Q&A pairs are easier for AI to extract and cite than prose [citation:4][citation:13]. |
-| `Person` | Author bio pages | Credentials, `jobTitle`, `sameAs` links. Supports E-E-A-T and makes authorship machine-readable [citation:4]. |
+| `Organization` | Homepage | Defines your brand entity with `sameAs` links to LinkedIn, Crunchbase, Wikipedia, Wikidata. This is how AI systems connect your site to your entity. |
+| `Article` / `BlogPosting` | Every content page | Headline, author, publisher, `datePublished`, `dateModified`. Recency matters: 76.4% of ChatGPT's top 1,000 cited pages were updated within the previous 30 days. |
+| `FAQPage` | Pages with FAQ sections | Explicit Q&A pairs are easier for AI to extract and cite than prose. |
+| `Person` | Author bio pages | Credentials, `jobTitle`, `sameAs` links. Supports E-E-A-T and makes authorship machine-readable. |
 
 **Tier 2 (implement next):**
 
 | Schema | Where | Why |
 |---|---|---|
-| `HowTo` | Step-by-step guides | Ordered steps map cleanly to how-to answers [citation:4]. |
-| `Product` / `SoftwareApplication` | Product/pricing pages | Price, availability, reviews — supports comparison and recommendation queries [citation:4]. |
-| `BreadcrumbList` | All pages | Hierarchy context, especially useful for large sites [citation:13]. |
+| `HowTo` | Step-by-step guides | Ordered steps map cleanly to how-to answers. |
+| `Product` / `SoftwareApplication` | Product/pricing pages | Price, availability, reviews — supports comparison and recommendation queries. |
+| `BreadcrumbList` | All pages | Hierarchy context, especially useful for large sites. |
 
 ### Implementation rules
 
-1. **Use JSON-LD.** Google's preferred format, and the easiest to maintain across templates [citation:4].
-2. **Nest entities.** Don't write `"author": "Jane Doe"`. Write `"author": {"@type": "Person", "name": "Jane Doe", "sameAs": [...]}`. Nested entities are more informative [citation:13].
-3. **Mark up only visible content.** AI systems cross-check structured data against rendered text. Marking up hidden content is a spam signal [citation:13].
+1. **Use JSON-LD.** Google's preferred format, and the easiest to maintain across templates.
+2. **Nest entities.** Don't write `"author": "Jane Doe"`. Write `"author": {"@type": "Person", "name": "Jane Doe", "sameAs": [...]}`. Nested entities are more informative.
+3. **Mark up only visible content.** AI systems cross-check structured data against rendered text. Marking up hidden content is a spam signal.
 4. **Validate.** Run every page through Google's Rich Results Test and the Schema.org validator before deploying.
 
 ### The `sameAs` pattern (critical for entity recognition)
@@ -114,7 +114,7 @@ For `Organization` schema, `sameAs` is where entity clarity lives. Include:
 ]
 ```
 
-The more authoritative profiles you link, the clearer your entity becomes to AI systems [citation:13].
+The more authoritative profiles you link, the clearer your entity becomes to AI systems.
 
 ### Output
 
@@ -128,13 +128,13 @@ All Tier 1 schema live and validated. Tier 2 scheduled for the next sprint.
 
 **Timeline:** 4–8 weeks, depending on site size.
 
-Do not rewrite everything. Focus on **top 20–30 pages by organic traffic**, and specifically pages that rank for queries where AI Overviews or Perplexity answers appear [citation:2].
+Do not rewrite everything. Focus on **top 20–30 pages by organic traffic**, and specifically pages that rank for queries where AI Overviews or Perplexity answers appear.
 
 ### The restructuring checklist (per page)
 
 **1. Add a direct answer block at the top.**
 
-Each section that answers a question should lead with a **40–60 word direct answer**, followed by supporting detail [citation:2]. This mirrors how AI engines extract: they look for clean, self-contained statements they can lift into a summary.
+Each section that answers a question should lead with a **40–60 word direct answer**, followed by supporting detail. This mirrors how AI engines extract: they look for clean, self-contained statements they can lift into a summary.
 
 **Weak:**
 > Keyword research is important. Many tools exist. We'll cover the best approaches.
@@ -151,17 +151,19 @@ Change declarative headings to the questions users actually ask:
 - "Intent types" → "What are the four types of search intent?"
 - "Tools" → "What tools do you need for keyword research?"
 
-Question-shaped headings align with how AI systems match queries to passages [citation:2].
+Question-shaped headings align with how AI systems match queries to passages.
 
 **3. Add FAQ sections.**
 
-Pages that don't have one should get a short FAQ (3–5 questions) covering adjacent questions users ask. Mark these up with `FAQPage` schema (from Phase 2) [citation:2].
+Pages that don't have one should get a short FAQ (3–5 questions) covering adjacent questions users ask. Mark these up with `FAQPage` schema (from Phase 2).
 
 **4. Add statistics, citations, and quotations.**
 
-Princeton's GEO research (KDD 2024) tested optimisation methods and found the top three by impact were [citation:3][citation:8]:
+The widely-cited Princeton GEO research (KDD 2024) reported that citing sources, adding quotations, and adding statistics improved AI visibility, and that keyword stuffing hurt.
 
-| Technique | Impact on AI visibility |
+> **Sourcing caveat:** A 2026 forensic audit of the KDD 2024 GEO paper found serious methodological problems — a frozen five-document sandbox, prompts that permitted fabricated data, and a self-biased evaluator. Realistic replications found the body-text rewrites produced no positive gains and were outperformed by traditional SEO ranking by 770%. The techniques below are therefore **Experimental (disputed)**, not proven. The practical takeaway — specific, sourced, quotable facts beat vague prose — remains sound; the specific percentage gains should not be treated as reliable. See [research log](../../RESEARCH-LOG.md#geo-research-disputed).
+
+| Technique | Reported impact (disputed) |
 |---|---|
 | **Cite sources** | +30–40% |
 | **Add quotations** (named experts, with credentials) | +30–40% |
@@ -195,7 +197,7 @@ Once the top pages are restructured, the standard shifts for new content. Writer
 - Named author with credentials and `Person` schema
 - Visible publish and update dates
 
-The goal is to stop treating AI optimisation as a retrofit and start treating it as the baseline [citation:2].
+The goal is to stop treating AI optimisation as a retrofit and start treating it as the baseline.
 
 ---
 
@@ -211,7 +213,7 @@ Traditional rank tracking tells you where you appear in Google. It does not tell
 
 **1. Prompt audit library.**
 
-Build a spreadsheet (or use a tool) tracking 30–50 target queries across ChatGPT, Gemini, Perplexity, and Claude [citation:2]. Record weekly:
+Build a spreadsheet (or use a tool) tracking 30–50 target queries across ChatGPT, Gemini, Perplexity, and Claude. Record weekly:
 - Is your domain cited?
 - Is your brand mentioned (with or without a link)?
 - Which competitors appear?
@@ -219,13 +221,13 @@ Build a spreadsheet (or use a tool) tracking 30–50 target queries across ChatG
 
 **2. GA4 AI referral segment.**
 
-Create a custom channel group in GA4 for AI search traffic. Referral domains to match [citation:10]:
+Create a custom channel group in GA4 for AI search traffic. Referral domains to match:
 
 ```
 chatgpt\.com|chat\.openai\.com|perplexity\.ai|copilot\.microsoft\.com|claude\.ai|gemini\.google\.com
 ```
 
-**Important caveat:** Google AI Overviews clicks appear as regular organic Google traffic and **cannot be reliably separated** in GA4 [citation:10]. Treat Google organic as blended; do not try to isolate AI Overview clicks with unreliable methods.
+**Important caveat:** Google AI Overviews clicks appear as regular organic Google traffic and **cannot be reliably separated** in GA4. Google's Search Console Generative AI report now provides **impressions** for AI features, but not clicks. Treat Google organic as blended; use the Search Console report for visibility signal. See [Part B → Measurement](../05-measurement/README.md).
 
 **3. Server log monitoring.**
 
@@ -235,12 +237,13 @@ Check logs for requests from AI retrieval bots (`OAI-SearchBot`, `PerplexityBot`
 
 | KPI | What it measures | Cadence |
 |---|---|---|
+| **AI impressions** (Google) | Appearances in AI Overviews/AI Mode | Weekly |
 | **Citation rate** | % of target prompts where your domain is cited | Weekly |
 | **AI share of voice** | Your citations vs. competitors for the same prompt set | Biweekly |
 | **AI referral traffic** | Sessions from AI engines, segmented in GA4 | Weekly |
 | **AI referral conversion rate** | Do AI visitors convert differently? | Monthly |
 
-For benchmark ranges by industry (B2B SaaS, media, e-commerce, etc.), see [Part B → Measurement](../05-measurement/README.md). Treat benchmarks as directional, not absolute [citation:10].
+For benchmark ranges by industry, see [Part B → Measurement](../05-measurement/README.md). Treat benchmarks as directional, not absolute.
 
 ---
 
@@ -251,9 +254,9 @@ For benchmark ranges by industry (B2B SaaS, media, e-commerce, etc.), see [Part 
 **Timeline:** Quarterly, ongoing.
 
 AI systems treat recency as a trust signal. The data is stark:
-- AI-cited content is **25.7% fresher** on average than content cited in traditional organic results [citation:1].
-- **76.4%** of ChatGPT's top 1,000 cited pages had been updated within the previous 30 days [citation:1].
-- Pages not updated quarterly are **3× more likely** to lose citations entirely [citation:1].
+- AI-cited content is **25.7% fresher** on average than content cited in traditional organic results.
+- **76.4%** of ChatGPT's top 1,000 cited pages had been updated within the previous 30 days.
+- Pages not updated quarterly are **3× more likely** to lose citations entirely.
 
 ### The freshness checklist (quarterly)
 
@@ -265,7 +268,7 @@ AI systems treat recency as a trust signal. The data is stark:
 - [ ] Re-run the prompt audit to check citation rates.
 - [ ] Identify pages losing citations and prioritise them.
 
-Do not wait for traffic to drop before refreshing. Set a quarterly review schedule for your highest-value content [citation:1].
+Do not wait for traffic to drop before refreshing. Set a quarterly review schedule for your highest-value content.
 
 ---
 
@@ -273,11 +276,11 @@ Do not wait for traffic to drop before refreshing. Set a quarterly review schedu
 
 Google has published explicit guidance on what does **not** help with AI features. The playbook covers this in [Google's AI Guide (2026)](google-ai-guide-2026.md), but the key points bear repeating here:
 
-- **`llms.txt` is not a Google requirement.** Google has not stated it uses it [citation:11].
-- **"Chunking" content is not required.** Google's systems understand multiple topics on a page [citation:11].
-- **Rewriting content "for AI" is not required.** The same systems understand synonyms and intent [citation:11].
-- **Manufactured mentions are not helpful.** Inauthentic brand mentions do not move rankings [citation:11].
-- **Schema is not an AI cheat code.** It supports rich results and machine readability, but it does not guarantee AI citation [citation:11].
+- **`llms.txt` is not a Google requirement.** Google has not stated it uses it. Independent studies found no measurable citation uplift, and Google's John Mueller stated no AI system currently uses it.
+- **"Chunking" content is not required.** Google's systems understand multiple topics on a page.
+- **Rewriting content "for AI" is not required.** The same systems understand synonyms and intent.
+- **Manufactured mentions are not helpful.** Inauthentic brand mentions do not move rankings.
+- **Schema is not an AI cheat code.** It supports rich results and machine readability, but it does not guarantee AI citation.
 
 The tactics in this playbook are grounded in **how retrieval actually works**, not in speculation. If a "GEO hack" promises fast results without evidence, treat it with suspicion.
 
@@ -292,7 +295,7 @@ If you want to start immediately, here is the minimum viable sequence:
 | **Week 1** | Baseline + audit | Run prompt audit across 4 engines. Check `robots.txt` for AI bot access. Verify server-rendering. |
 | **Week 2** | Schema sprint (Tier 1) | Add `Organization`, `Article`, `FAQPage`, `Person` schema to top 20 pages. Validate all. |
 | **Week 3** | Content restructuring (top 10 pages) | Add direct answer blocks. Convert H2s to questions. Add FAQ sections. |
-| **Week 4** | Tracking + iteration | Set up GA4 AI segment. Re-run prompt audit. Compare to baseline. Identify next 10 pages. |
+| **Week 4** | Tracking + iteration | Set up GA4 AI segment. Check Search Console Generative AI report. Re-run prompt audit. Compare to baseline. Identify next 10 pages. |
 
 After 30 days, you will have:
 - A baseline to measure against
@@ -309,14 +312,14 @@ From there, repeat the restructuring sprint for the next batch of pages, and mov
 
 1. **Skipping the baseline.** If you don't measure before changing, you can't tell what worked.
 2. **Blocking retrieval bots.** The most common silent failure. See Phase 1.
-3. **Adding schema without restructuring content.** Schema on a page with no direct answers still won't be cited [citation:2].
+3. **Adding schema without restructuring content.** Schema on a page with no direct answers still won't be cited.
 4. **Rewriting everything at once.** Focus on top 20–30 pages first. New content follows the standard from day one.
-5. **Tracking only Google.** Perplexity and ChatGPT cite differently. Track multiple engines [citation:2].
-6. **Ignoring freshness.** A one-time optimisation decays. Quarterly updates are required [citation:1].
-7. **Keyword stuffing.** Princeton's research found it **reduces** AI visibility by 10% [citation:3].
-8. **Chasing "AI SEO hacks."** Google has explicitly said no special optimisation is required. Fundamentals win [citation:11].
-9. **Not adding statistics and citations.** The top three GEO techniques are sources, quotations, and statistics. Prose alone is not enough [citation:3].
-10. **Expecting overnight results.** Technical foundation: 2–4 weeks. Content restructuring: 4–8 weeks. Measurable citation improvements: 6–12 weeks after implementation [citation:2].
+5. **Tracking only Google.** Perplexity and ChatGPT cite differently. Track multiple engines.
+6. **Ignoring freshness.** A one-time optimisation decays. Quarterly updates are required.
+7. **Keyword stuffing.** Traditional SEO consensus and disputed GEO research both find it hurts.
+8. **Chasing "AI SEO hacks."** Google has explicitly said no special optimisation is required. Fundamentals win.
+9. **Trusting percentage gains from the GEO paper.** The Princeton techniques are disputed; use them as directional principles, not precise levers.
+10. **Expecting overnight results.** Technical foundation: 2–4 weeks. Content restructuring: 4–8 weeks. Measurable citation improvements: 6–12 weeks after implementation.
 
 ---
 
@@ -325,9 +328,9 @@ From there, repeat the restructuring sprint for the next batch of pages, and mov
 - **Baseline first.** Measure citations before changing anything.
 - **Phase 1 (technical access)** and **Phase 2 (schema sprint)** produce the fastest initial gains.
 - **Restructure top 20–30 pages** — direct answer blocks, question H2s, FAQ sections.
-- **Add statistics, citations, and quotations.** Princeton research shows these are the highest-impact techniques; keyword stuffing hurts.
+- **Specific, sourced, quotable facts beat vague prose** — but the Princeton percentage gains are disputed. Treat them as directional principles, not precise levers.
 - **Track multiple engines.** ChatGPT, Perplexity, Gemini, and Google AI Overviews cite differently.
-- **Google AI Overview clicks are not separately trackable.** Treat Google organic as blended.
+- **Search Console now provides AI impressions** (since June 2026), but not clicks. Use it for visibility signal.
 - **Freshness is not optional.** Pages not updated quarterly lose citations.
 - **Google's guidance is clear:** no special files or hacks required. Fundamentals plus citability win.
 
