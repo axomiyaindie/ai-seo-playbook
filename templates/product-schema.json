@@ -1,0 +1,19 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Your Product",
+  "description": "What it is and who it is for.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "url": "https://example.com",
+  "offers": { "@type": "Offer", "price": "29.00", "priceCurrency": "USD" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Your Company",
+    "url": "https://example.com",
+    "sameAs": [
+      "https://www.linkedin.com/company/yourcompany",
+      "https://github.com/yourcompany"
+    ]
+  }
+}
