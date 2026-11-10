@@ -56,4 +56,4 @@ This project grows with the community. Read [CONTRIBUTING.md](CONTRIBUTING.md). 
 
 ## License
 
-Content: [CC BY 4.0](LICENSE) · Code and templates: MIT. Built by [@axomiyaindie](https://github.com/axomiyaindie) and contributors.
+Content: [CC BY 4.0](LICENSE) · Code and templates: MIT. Built by [@Rakibul](https://github.com/rakibuli10) and contributors.
