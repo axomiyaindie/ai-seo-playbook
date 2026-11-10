@@ -1,4 +1,4 @@
-﻿# References and Official Links
+# References and Official Links
 
 > Part of the [AI SEO Playbook](https://github.com/rakibuli10/ai-seo-playbook). Official specifications, documentation, and monitoring sources for every standard covered in the playbook.
 
@@ -180,4 +180,3 @@ Check these **quarterly** for updates:
 ---
 
 *Part of the [AI SEO Playbook](https://github.com/rakibuli10/ai-seo-playbook).*
-
