@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">AI SEO Playbook</h1>
-<p align="center"><b>The open-source playbook for ranking in search engines and getting your product cited by Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini and every other LLM.</b></p>
+<p align="center"><b>The playbook for ranking in search engines and getting your product cited by Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini and every other LLM.</b></p>
 
 <p align="center">
   Traditional SEO · GEO · AEO · LLMO · Technical · Content · Measurement
