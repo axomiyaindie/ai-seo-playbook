@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">AI SEO Playbook</h1>
-<p align="center"><b>The free playbook for ranking in search engines and getting your product cited by Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini and every other LLM.</b></p>
+<p align="center"><b>Search is no longer ten blue links. This playbook covers both halves of visibility: ranking in traditional search, and getting retrieved, cited, and recommended by AI.</b></p>
 
 <p align="center">
   Traditional SEO · GEO · AEO · LLMO · Technical · Content · Measurement
